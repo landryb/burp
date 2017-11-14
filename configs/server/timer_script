@@ -11,7 +11,7 @@ reserved1="$1" ; shift
 reserved2="$1" ; shift
 interval="$1" ; shift
 timestamp="$current/timestamp"
-date --version 2>&1|grep -qv coreutils
+date --version 2>&1 | head -1 | grep -qv coreutils
 gnu_date=$?
 
 # A 'backup' file placed in the storage directory tells this script that
